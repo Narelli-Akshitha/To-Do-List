@@ -1,0 +1,187 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#EEEEEE;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:20px;
+}
+
+.container{
+    width:100%;
+    max-width:500px;
+    background:#fff;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 15px 35px rgba(31,111,95,.2);
+}
+
+header{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+header h1{
+    color:#1F6F5F;
+    font-size:2rem;
+    margin-bottom:8px;
+}
+
+header p{
+    color:#666;
+    font-size:14px;
+}
+
+/* Input Section */
+
+.input-section{
+    display:flex;
+    gap:10px;
+    margin-bottom:25px;
+}
+
+.input-section input{
+    flex:1;
+    padding:14px;
+    border:2px solid #2FA084;
+    border-radius:10px;
+    font-size:15px;
+    outline:none;
+    transition:.3s;
+}
+
+.input-section input:focus{
+    border-color:#1F6F5F;
+    box-shadow:0 0 10px rgba(47,160,132,.3);
+}
+
+.input-section button{
+    background:#1F6F5F;
+    color:white;
+    border:none;
+    padding:14px 18px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:15px;
+    transition:.3s;
+}
+
+.input-section button:hover{
+    background:#2FA084;
+    transform:scale(1.05);
+}
+
+/* Task List */
+
+.task-list{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+/* Individual Task */
+
+.task{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#EEEEEE;
+    padding:15px;
+    border-left:6px solid #6FCF97;
+    border-radius:12px;
+    transition:.3s;
+    animation:fadeIn .4s ease;
+}
+
+.task:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 18px rgba(0,0,0,.1);
+}
+
+.task span{
+    flex:1;
+    cursor:pointer;
+    color:#1F6F5F;
+    font-size:16px;
+    word-break:break-word;
+}
+
+/* Delete Button */
+
+.delete-btn{
+    background:#ff4d4d;
+    color:white;
+    border:none;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    cursor:pointer;
+    transition:.3s;
+    margin-left:15px;
+}
+
+.delete-btn:hover{
+    background:#d62828;
+    transform:rotate(10deg) scale(1.1);
+}
+
+/* Completed Task */
+
+.task span[style*="line-through"]{
+    color:#888;
+}
+
+/* Animation */
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(-10px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#2FA084;
+    border-radius:10px;
+}
+
+/* Responsive */
+
+@media(max-width:550px){
+
+    .container{
+        padding:20px;
+    }
+
+    .input-section{
+        flex-direction:column;
+    }
+
+    .input-section button{
+        width:100%;
+    }
+
+    header h1{
+        font-size:1.7rem;
+    }
+}
